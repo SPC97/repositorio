@@ -1,0 +1,14 @@
+<!--C.1 Cortamos el HTML detalles del héroe desde la parte inferior de la plantilla HeroesComponent -->
+<div *ngIf="hero">
+  <h2>Detalle de: {{hero.name | uppercase}}</h2>
+  <div><span>id: </span>{{hero.id}}</div>  
+  <div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name"/>
+    </label>
+  </div>
+  <div><span>Poder: </span>{{hero.poder}}</div>
+  <div><span>Película: </span>{{hero.pelicula}}</div>
+</div>
+<!--E.24 botón volver en la parte inferior de la plantilla del componente -->
+<button (click)="goBack()">Volver atras</button>

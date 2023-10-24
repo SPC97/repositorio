@@ -1,0 +1,32 @@
+<!--{{hero}} //A.2 Eliminamos el prederminado y mostramos el heroe-->
+
+<!--A.6 Habiamos implementado para mostrar objeto de heroe(hero.id y hero.name)-->
+
+<!--A.7 Habiamos implementado el héroe en mayúsculas.
+<h2>{{hero.name | uppercase}} Details</h2> -->
+
+<!--A.8 Realizamos el enlace de datos bidireccional
+--- B.9 Agregamos una seccion de detalles, para ver los detalles de ese heroe
+<div>
+  <label>name:
+    <input [(ngModel)]="hero.name" placeholder="name"/>
+  </label>
+</div> -->
+
+<!--B.4 En esta parte enumeramos heroes con *ngFor -->
+  <h2>Lista de heroes DC</h2>
+  <ul class="heroes">
+  <!--B.5 Esto es un heroe para enumerarlos a todos y agregamos *ngFor* a <li> para la lista de héroes -->
+  <!--B.7 Agregamos el enlace de evento click a su <li> -->
+  <!--B.10 Agregamos el enlace [class.selected]-->
+  <!--E.19 Actualizamos para el router link-->
+   <li *ngFor="let hero of heroes" (click)="onSelect(hero)" title={{hero.poder}}
+   [class.selected]="hero === selectedHero" routerLink="/detail/{{hero.id}}">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+<!--C.3 Agregamos para vincular externamente-->
+<!--C.6 Actualizamos para vincular HeroesComponent -->
+
+<!--E.16 Eliminamos el app hero detail
+  <app-hero-detail [hero]="selectedHero"></app-hero-detail>-->

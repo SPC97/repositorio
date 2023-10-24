@@ -1,0 +1,9 @@
+<!--D.19 Reemplazamos la plantilla MessagesComponent generada por CLI  -->
+<div *ngIf="messageService.messages.length">
+
+    <h2>Historial de Clicks</h2>
+    <button class="clear"
+            (click)="messageService.clear()">LIMPIAR</button>
+    <div *ngFor='let message of messageService.messages'> {{message}} </div>
+  
+  </div>

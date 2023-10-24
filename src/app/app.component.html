@@ -1,0 +1,12 @@
+<!--A.3 Implementamos para mostrar HeroesComponent-->
+<h1>{{title}}</h1>
+<!--E.7 Agregamos un enlace de navegacion para la lista de heores-->
+<nav>
+    <!--E.15 Agregamos un enlace para volver al dashboard-->
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes">Lista de Heroes</a>
+</nav>
+<!--E.6 Reemplazamos <app-heroes> con <router-outlet> para agregar RouterOutlet-->
+<router-outlet></router-outlet>
+<!--D.12 Implementamos para mostrar el MessagesComponent generado.-->
+<app-messages></app-messages>
